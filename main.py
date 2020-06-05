@@ -19,15 +19,9 @@ def write_data_to_database(data):
     print(data)
 
 def main():
-    data= read_data_from_web()
+    data = read_data_from_web()
     modified_data = process_data(data)
-    write_data_to_database(data)
+    write_data_to_database(modified_data)
 
 if __name__ == "__main__":
-    data = "My data read from the web"
-    print(data)
-    modified_data = process_data(data)
-    print(modified_data)
-
-if __name__  == "__main__":
     main()
