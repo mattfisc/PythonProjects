@@ -23,5 +23,5 @@ def main():
     modified_data = process_data(data)
     write_data_to_database(modified_data)
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
