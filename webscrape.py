@@ -51,5 +51,5 @@ soup = BeautifulSoup(html_doc,'html.parser')
 # el=soup.find('h3').find_next_sibling('p')
 
 
-print(el)
+#print(el)
 
