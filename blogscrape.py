@@ -17,6 +17,6 @@ foxData ={}
 # title = soup.find(class_='info-header').find_next('a').get_text()
 # print(title)
 
-title = soup.find_all('a')
+title = soup.select('a')
 print(title)
 
