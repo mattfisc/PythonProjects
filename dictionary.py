@@ -1,6 +1,24 @@
+import random
 
-thisdict = dict(brand="Ford", model="Mustang", year=1964)
-# note that keywords are not string literals
-# note the use of equals rather than colon for the assignment
-print(thisdict.popitem())
-print(thisdict)
+class MyNumbers:
+  def __iter__(self):
+    self.a = 2
+    return self
+
+  def __next__(self):
+    x = self.a
+    self.a += random.randint(2,10)
+    return x
+
+myclass = MyNumbers()
+myiter = iter(myclass)
+
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
