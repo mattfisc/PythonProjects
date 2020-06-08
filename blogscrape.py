@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from csv import writer
-import numpy as np
+import datetime
 
 response = requests.get('https://www.foxnews.com/')
 
@@ -17,6 +17,11 @@ with open('posts.csv','w') as csv_file:
     headers = ['title']
     csv_writer.writerow(headers)
 
+    #time
+    time = datetime.datetime.now()
+    csv_writer.writerow('Date: ')
+    csv_writer.writerow(time.strftime("%x"))
+
     titles =[]
     for line in lines:
 
@@ -24,6 +29,7 @@ with open('posts.csv','w') as csv_file:
         titles.append(title)
         csv_writer.writerow(title)
 
-for title in titles:
-    print(title)
+
+
+
 
